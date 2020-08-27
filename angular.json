@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "events-app"
+    }
+  },
+  "defaultProject": "events-app",
+  "cli": {
+    "analytics": false
+  }
 }
