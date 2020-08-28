@@ -1,4 +1,13 @@
-<header></header>
+<header>
+  <a
+    *ngFor="let navigationItem of navigationItems"
+    class="nav-link"
+    routerLinkActive="active-link"
+    [routerLink]="navigationItem.path"
+  >
+    <span>{{ navigationItem.label }}</span>
+  </a>
+</header>
 <main>
   <router-outlet></router-outlet>
 </main>
