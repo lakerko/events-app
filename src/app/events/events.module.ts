@@ -12,6 +12,7 @@ import { PastEventsPageComponent } from './past-events-page/past-events-page.com
 import { EventDetailPageComponent } from './event-detail-page/event-detail-page.component';
 
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { DisplayDateComponent } from './components/display-date/display-date.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     EventListItemComponent,
     EventDetailPageComponent,
     PageNotFoundComponent,
+    DisplayDateComponent,
   ],
   imports: [CommonModule, EventsRoutingModule],
 })

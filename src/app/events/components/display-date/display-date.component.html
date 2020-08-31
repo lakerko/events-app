@@ -1,0 +1,6 @@
+<time class="date" [dateTime]="timestamp | date: 'yyyy-M-d'">
+  {{ timestamp | date: 'MMM d, y ' | uppercase }}
+</time>
+<time class="time" [dateTime]="timestamp | date: 'H:m'">
+  {{ timestamp | date: 'E, HH:mm' }}
+</time>
