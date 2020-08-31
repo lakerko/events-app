@@ -11,6 +11,8 @@ import { PastEventsPageComponent } from './past-events-page/past-events-page.com
 
 import { EventDetailPageComponent } from './event-detail-page/event-detail-page.component';
 
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+
 @NgModule({
   declarations: [
     EventsPageComponent,
@@ -18,6 +20,7 @@ import { EventDetailPageComponent } from './event-detail-page/event-detail-page.
     PastEventsPageComponent,
     EventListItemComponent,
     EventDetailPageComponent,
+    PageNotFoundComponent,
   ],
   imports: [CommonModule, EventsRoutingModule],
 })
