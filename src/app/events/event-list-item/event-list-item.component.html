@@ -1,0 +1,24 @@
+<a [routerLink]="['../', eventDefinition.id]">
+  <div class="headline-row">
+    <div class="date-box">
+      <span class="date_month">{{
+        eventDefinition.startDate | date: 'LLL' | uppercase
+      }}</span>
+      <span class="date_day">{{ eventDefinition.startDate | date: 'd' }}</span>
+    </div>
+    <div class="info-box">
+      <h3>{{ eventDefinition.name }}</h3>
+      <p>
+        <span class="date_time">
+          {{ eventDefinition.startDate | date: 'EEEE, HH:mm' }}
+        </span>
+        <span class="location">
+          {{ eventDefinition.location }}
+        </span>
+      </p>
+    </div>
+  </div>
+  <div class="sub-row">
+    <p>{{ eventDefinition.description }}</p>
+  </div>
+</a>
