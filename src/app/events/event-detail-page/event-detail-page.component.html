@@ -1,0 +1,16 @@
+<article>
+  <h3>{{ eventData.name }}</h3>
+  <div class="date-box">
+    <app-display-date [timestamp]="eventData.startDate"></app-display-date>
+    <ng-container *ngIf="eventData.endDate">
+      <span class="date-separator">-</span>
+      <app-display-date [timestamp]="eventData.endDate"></app-display-date>
+    </ng-container>
+  </div>
+
+  <p class="location">{{ eventData.location }}</p>
+
+  <aside class="section-separator"></aside>
+
+  <p class="description">{{ eventData.description }}</p>
+</article>
