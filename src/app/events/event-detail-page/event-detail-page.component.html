@@ -1,4 +1,4 @@
-<article>
+<article *ngIf="eventData; else userCreatedProblem">
   <h3>{{ eventData.name }}</h3>
   <div class="date-box">
     <app-display-date [timestamp]="eventData.startDate"></app-display-date>
@@ -14,3 +14,9 @@
 
   <p class="description">{{ eventData.description }}</p>
 </article>
+
+<ng-template #userCreatedProblem>
+  <article>
+    <h3>Event not found</h3>
+  </article>
+</ng-template>
