@@ -2,8 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { EventsPageComponent } from './events-page/events-page.component';
-import { UpcomingEventsPageComponent } from './upcoming-events-page/upcoming-events-page.component';
-import { PastEventsPageComponent } from './past-events-page/past-events-page.component';
+import { EventsListPageComponent } from './events-list-page/events-list-page.component';
+import { EventDetailPageComponent } from './event-detail-page/event-detail-page.component';
+
+import { EventCreatePageComponent } from './event-create-page/event-create-page.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+
+import { EventDetailResolverService } from './EventDetailResolver.service';
 
 const routes: Routes = [
   {
@@ -11,17 +16,28 @@ const routes: Routes = [
     component: EventsPageComponent,
     children: [
       {
-        path: 'upcoming',
-        component: UpcomingEventsPageComponent,
+        path: 'list',
+        component: EventsListPageComponent,
       },
       {
-        path: 'past',
-        component: PastEventsPageComponent,
+        path: ':id',
+        component: EventDetailPageComponent,
+        resolve: {
+          event: EventDetailResolverService,
+        },
+      },
+      {
+        path: 'create',
+        component: EventCreatePageComponent,
       },
       {
         path: '',
-        redirectTo: 'upcoming',
+        redirectTo: 'list',
         pathMatch: 'full',
+      },
+      {
+        path: '**',
+        component: PageNotFoundComponent,
       },
     ],
   },
