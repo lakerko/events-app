@@ -20,15 +20,15 @@ const routes: Routes = [
         component: EventsListPageComponent,
       },
       {
+        path: 'create',
+        component: EventCreatePageComponent,
+      },
+      {
         path: ':id',
         component: EventDetailPageComponent,
         resolve: {
           event: EventDetailResolverService,
         },
-      },
-      {
-        path: 'create',
-        component: EventCreatePageComponent,
       },
       {
         path: '',
