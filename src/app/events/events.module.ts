@@ -16,7 +16,9 @@ import { EventDetailPageComponent } from './event-detail-page/event-detail-page.
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DisplayDateComponent } from './components/display-date/display-date.component';
 import { EventCreatePageComponent } from './event-create-page/event-create-page.component';
+
 import { FilterEventsPipe } from './pipes/filter-events.pipe';
+import { SortByDatePipe } from './pipes/sort-by-date.pipe';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { FilterEventsPipe } from './pipes/filter-events.pipe';
     DisplayDateComponent,
     EventCreatePageComponent,
     FilterEventsPipe,
+    SortByDatePipe,
   ],
   imports: [
     CommonModule,
