@@ -6,23 +6,27 @@ import { EventsRoutingModule } from './events-routing.module';
 import { EventsPageComponent } from './events-page/events-page.component';
 import { EventListItemComponent } from './event-list-item/event-list-item.component';
 
-import { UpcomingEventsPageComponent } from './upcoming-events-page/upcoming-events-page.component';
-import { PastEventsPageComponent } from './past-events-page/past-events-page.component';
+import { EventsListPageComponent } from './events-list-page/events-list-page.component';
 
 import { EventDetailPageComponent } from './event-detail-page/event-detail-page.component';
 
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DisplayDateComponent } from './components/display-date/display-date.component';
+import { FilterEventsPipe } from './pipes/filter-events.pipe';
+import { SortByDatePipe } from './pipes/sort-by-date.pipe';
 
 @NgModule({
   declarations: [
     EventsPageComponent,
-    UpcomingEventsPageComponent,
-    PastEventsPageComponent,
+    EventsListPageComponent,
     EventListItemComponent,
     EventDetailPageComponent,
     PageNotFoundComponent,
     DisplayDateComponent,
+
+    FilterEventsPipe,
+
+    SortByDatePipe,
   ],
   imports: [CommonModule, EventsRoutingModule],
 })
