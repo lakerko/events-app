@@ -3,21 +3,21 @@
 :host {
   display: block;
   width: 50vw;
-  padding: 2rem;
-  border-radius: 1rem;
+  padding: $normal-spacing;
+  border-radius: $small-spacing;
   background-color: #fff;
   overflow: hidden;
   box-sizing: border-box;
 }
 
 h2 {
-  margin: 0 0 2rem;
+  margin: 0 0 $normal-spacing;
   text-transform: uppercase;
 }
 
 ul {
   list-style-type: none;
-  margin: 0 0 2rem;
+  margin: 0 0 $normal-spacing;
   padding: 0;
 }
 
@@ -26,13 +26,13 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 2rem;
+  padding-bottom: $normal-spacing;
 
   p {
     position: absolute;
-    bottom: 1rem;
+    bottom: $small-spacing;
     margin: 0;
-    padding-left: 1rem;
+    padding-left: $small-spacing;
     font-size: 0.75rem;
   }
 
@@ -55,11 +55,11 @@ li {
 
 button {
   display: inline-block;
-  padding: 0.75rem 2rem;
-  margin: 0 1rem 0 0;
+  padding: 0.75rem $normal-spacing;
+  margin: 0 $small-spacing 0 0;
   background: $app-color-green;
   color: #000;
-  font-size: 1rem;
+  font-size: $small-spacing;
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
@@ -97,6 +97,6 @@ button {
 @media screen and (max-width: 959px) {
   :host {
     width: 80vw;
-    padding: 1rem;
+    padding: $small-spacing;
   }
 }

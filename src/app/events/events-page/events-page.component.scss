@@ -1,6 +1,6 @@
+@import 'variables';
+
 $header-height: 70px;
-$normal-spacing: 2rem;
-$small-screen-spacing: $normal-spacing / 2;
 
 header {
   position: fixed;
@@ -29,7 +29,7 @@ main {
   position: relative;
   display: inline-block;
   padding: 0;
-  margin-right: $small-screen-spacing;
+  margin-right: $small-spacing;
   text-transform: uppercase;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -65,7 +65,7 @@ main {
 
 @media screen and (max-width: 959px) {
   main {
-    padding-left: $small-screen-spacing;
-    padding-right: $small-screen-spacing;
+    padding-left: $small-spacing;
+    padding-right: $small-spacing;
   }
 }

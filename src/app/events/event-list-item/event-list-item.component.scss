@@ -4,8 +4,8 @@
   display: block;
   width: 500px;
   max-width: 80vw;
-  margin-bottom: 2rem;
-  padding: 1rem;
+  margin-bottom: $normal-spacing;
+  padding: $small-spacing;
   background-color: #fff;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   border-radius: 0.5rem;
@@ -23,7 +23,7 @@ a {
 .headline-row {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: $small-spacing;
 }
 
 .date-box {
@@ -33,7 +33,7 @@ a {
   align-items: center;
   height: 90px;
   width: 90px;
-  margin-right: 1rem;
+  margin-right: $small-spacing;
   padding: 0.5rem;
   box-sizing: border-box;
   line-height: 1.5;
@@ -58,7 +58,7 @@ a {
   overflow: hidden;
 
   h3 {
-    margin: 0 0 1rem;
+    margin: 0 0 $small-spacing;
     font-size: 1.5rem;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -78,7 +78,7 @@ a {
   p {
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: 1rem;
+    font-size: $small-spacing;
     line-height: 1.5;
     margin: 0;
     max-height: 3em;

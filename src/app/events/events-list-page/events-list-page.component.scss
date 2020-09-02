@@ -2,7 +2,7 @@
 
 .toggler {
   display: flex;
-  margin-bottom: 2rem;
+  margin-bottom: $normal-spacing;
   background-color: #fff;
   border: 8px solid #fff;
   border-radius: 4px;
@@ -16,9 +16,11 @@
   height: 3rem;
   cursor: pointer;
   box-sizing: border-box;
+  border: 2px solid #fff;
 
   &.active-toggle {
     background-color: $app-color-purple;
+    border: 2px solid $app-color-purple;
     color: #fff;
   }
 
@@ -29,10 +31,10 @@
 
 .category-header {
   display: inline-block;
-  margin: 0 0 2rem;
+  margin: 0 0 $normal-spacing;
   padding: 0.25rem 1rem;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: $normal-spacing;
   text-transform: uppercase;
   color: #000;
   background-color: #fff;
