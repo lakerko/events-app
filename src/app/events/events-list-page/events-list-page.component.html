@@ -1,0 +1,30 @@
+<aside class="toggler">
+  <div
+    class="toggle"
+    [class.active-toggle]="eventFilter === 'upcoming'"
+    (click)="switchTo('upcoming')"
+  >
+    Upcoming
+  </div>
+  <div
+    class="toggle"
+    [class.active-toggle]="eventFilter === 'past'"
+    (click)="switchTo('past')"
+  >
+    Past
+  </div>
+</aside>
+
+<h2 class="category-header">All the {{ eventFilter | uppercase }} events</h2>
+
+<article class="events-list">
+  <app-event-list-item
+    *ngFor="
+      let event of eventsHttpService.getEvents$()
+        | async
+        | filterEvents: eventFilter
+        | sortByDate
+    "
+    [eventDefinition]="event"
+  ></app-event-list-item>
+</article>

@@ -1,0 +1,49 @@
+@import 'variables';
+
+.toggler {
+  display: flex;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  border: 8px solid #fff;
+  border-radius: 4px;
+}
+
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  height: 3rem;
+  cursor: pointer;
+  box-sizing: border-box;
+  transform: skewX(10deg);
+
+  &.active-toggle {
+    background-color: $app-color-purple;
+    color: #fff;
+  }
+
+  &:hover {
+    border: 2px solid $app-color-purple;
+  }
+}
+
+.category-header {
+  display: inline-block;
+  margin: 0 0 2rem;
+  padding: 0.25rem 1rem;
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #000;
+  background-color: #fff;
+  border-top-right-radius: 1.25rem;
+  border-bottom-left-radius: 1.25rem;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
