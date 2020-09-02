@@ -5,9 +5,9 @@ import {
   Validators,
   AbstractControl,
 } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { CreateEventService } from './create-event.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-event-create-page',
