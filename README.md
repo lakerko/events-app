@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
 
+## Some notes
+
+1. I didn't use any component library (other then date picker), so that you could see my styling. If it was my project, I would use some.
+2. I didn't do any testing unfortunately. I've never done test (in every work there wasn't time for it, in my side project it's the same story). My aspiration was to learn them for this assignment. Unfortunately for me, I didn't have time for it. I plan to do them for my side project in upcoming month or so, but so far, nothing. I failed.
+3. I wanted to add date validation, that's what I was trying to do for the past 3 hours. But I deleted it, because I couldn't make the date plus time pattern work. I failed.
+4. In real application, I wouldn't be so naive with the data sources. I wouldn't request all the data, I would use query params or something. And I would implement lazy loading on scroll or some such. But for these fake data I chose not to.
+5. Some unforseen life events changed my harmonogram, I was hoping to do a better job. I'm sorry in advance.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
