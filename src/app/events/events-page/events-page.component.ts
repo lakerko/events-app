@@ -9,12 +9,12 @@ import { NavigationItem } from '../models/navigation.interface';
 export class EventsPageComponent implements OnInit {
   public navigationItems: NavigationItem[] = [
     {
-      label: 'upcoming',
-      path: ['upcoming'],
+      label: 'events',
+      path: ['list'],
     },
     {
-      label: 'past',
-      path: ['past'],
+      label: 'create event',
+      path: ['create'],
     },
   ];
 

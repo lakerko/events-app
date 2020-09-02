@@ -1,5 +1,6 @@
 $header-height: 70px;
 $normal-spacing: 2rem;
+$small-screen-spacing: $normal-spacing / 2;
 
 header {
   position: fixed;
@@ -16,7 +17,10 @@ header {
 }
 
 main {
-  padding: calc(#{$header-height} + #{$normal-spacing}) $normal-spacing 0;
+  display: flex;
+  justify-content: center;
+  padding: calc(#{$header-height} + #{$normal-spacing}) $normal-spacing
+    $normal-spacing;
   min-height: 100vh;
   box-sizing: border-box;
 }
@@ -25,9 +29,8 @@ main {
   position: relative;
   display: inline-block;
   padding: 0;
-  margin-right: 1rem;
+  margin-right: $small-screen-spacing;
   text-transform: uppercase;
-  font-family: helvetica;
   font-size: 1.25rem;
   line-height: 1.5;
   text-decoration: none;
@@ -57,5 +60,12 @@ main {
   &.active-link {
     font-weight: bold;
     color: #5d2db5;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  main {
+    padding-left: $small-screen-spacing;
+    padding-right: $small-screen-spacing;
   }
 }
