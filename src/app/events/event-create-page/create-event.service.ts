@@ -15,18 +15,13 @@ export class CreateEventService {
     return {
       format: 'DD.MM.YYYY HH:mm',
       firstDayOfWeek: 'mo',
-      // min: this.getTodayInConfigFormat(),
-      showGoToCurrent: true,
       showTwentyFourHours: true,
+      isDayDisabledCallback: (Moment) => this.isBeforeNow(Moment),
     };
   }
 
-  getTodayInConfigFormat(): string {
-    const today = new Date();
-    const day = String(today.getDate()).padStart(2, '0');
-    const month = String(today.getMonth() + 1).padStart(2, '0');
-    const year = today.getFullYear();
-    return `${year}-${month}-${day}`;
+  isBeforeNow(day): boolean {
+    return day._d.getTime() < new Date().getTime();
   }
 
   createEventAndGetId(formValues: {
