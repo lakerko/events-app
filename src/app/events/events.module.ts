@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { DpDatePickerModule } from 'ng2-date-picker';
 
 import { EventsRoutingModule } from './events-routing.module';
 
@@ -12,8 +15,8 @@ import { EventDetailPageComponent } from './event-detail-page/event-detail-page.
 
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DisplayDateComponent } from './components/display-date/display-date.component';
+import { EventCreatePageComponent } from './event-create-page/event-create-page.component';
 import { FilterEventsPipe } from './pipes/filter-events.pipe';
-import { SortByDatePipe } from './pipes/sort-by-date.pipe';
 
 @NgModule({
   declarations: [
@@ -23,11 +26,16 @@ import { SortByDatePipe } from './pipes/sort-by-date.pipe';
     EventDetailPageComponent,
     PageNotFoundComponent,
     DisplayDateComponent,
-
+    EventCreatePageComponent,
     FilterEventsPipe,
-
-    SortByDatePipe,
   ],
-  imports: [CommonModule, EventsRoutingModule],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+
+    DpDatePickerModule,
+
+    EventsRoutingModule,
+  ],
 })
 export class EventsModule {}

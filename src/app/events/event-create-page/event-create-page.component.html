@@ -1,0 +1,94 @@
+<h2>Create new event</h2>
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <ul>
+    <li>
+      <label for="name">Name</label>
+      <input id="name" type="text" formControlName="name" autocomplete="off" />
+      <p class="hint" *ngIf="name.untouched">Name of the event is required</p>
+      <p class="error" *ngIf="name.hasError('required') && name.touched">
+        Field is required
+      </p>
+    </li>
+
+    <li>
+      <label for="location">Location</label>
+      <input
+        id="location"
+        type="text"
+        formControlName="location"
+        autocomplete="off"
+      />
+      <p class="hint" *ngIf="location.untouched">
+        Location of the event is required
+      </p>
+      <p
+        class="error"
+        *ngIf="location.hasError('required') && location.touched"
+      >
+        Field is required
+      </p>
+    </li>
+
+    <li>
+      <label for="description">Description</label>
+      <textarea
+        id="description"
+        type="text"
+        formControlName="description"
+        cols="40"
+        rows="10"
+      ></textarea>
+      <p class="hint" *ngIf="description.untouched">
+        Description of the event is required
+      </p>
+      <p
+        class="error"
+        *ngIf="description.hasError('required') && description.touched"
+      >
+        Field is required
+      </p>
+    </li>
+
+    <li>
+      <label for="startDate">Start date</label>
+      <input
+        id="startDate"
+        type="text"
+        formControlName="startDate"
+        mode="daytime"
+        theme="dp-material"
+        [dpDayPicker]="config"
+        autocomplete="off"
+      />
+      <p class="hint" *ngIf="startDate.untouched">
+        Date of the start of the event is required
+      </p>
+      <p
+        class="error"
+        *ngIf="startDate.hasError('required') && startDate.touched"
+      >
+        Field is required
+      </p>
+    </li>
+
+    <li>
+      <label for="endDate">End date</label>
+      <input
+        id="endDate"
+        type="text"
+        formControlName="endDate"
+        mode="daytime"
+        theme="dp-material"
+        [dpDayPicker]="config"
+        autocomplete="off"
+      />
+      <p class="hint">Date of the end of the event</p>
+    </li>
+  </ul>
+
+  <button type="submit" [disabled]="isSaveButtonDisabled">Save</button>
+  <span *ngIf="shouldHighlightErrors" class="error"
+    >Please, fix highlighted errors!</span
+  >
+</form>
