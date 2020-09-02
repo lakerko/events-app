@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
   templateUrl: './event-create-page.component.html',
   styleUrls: ['./event-create-page.component.scss'],
 })
-export class EventCreatePageComponent implements OnInit {
+export class EventCreatePageComponent {
   public form: FormGroup = this.fb.group({
     name: ['', [Validators.required]],
     description: ['', [Validators.required]],
@@ -33,10 +33,6 @@ export class EventCreatePageComponent implements OnInit {
     private readonly router: Router,
     private readonly createEventService: CreateEventService,
   ) {}
-
-  ngOnInit(): void {
-    this.startDate.valueChanges.subscribe((value) => console.log(value));
-  }
 
   get name(): AbstractControl {
     return this.form.get('name');
